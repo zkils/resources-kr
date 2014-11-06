@@ -2,9 +2,104 @@
 <html>
   <head>
     <title><%= title %></title>
+    <script type="application/javascript" src="/javascripts/jquery-1.11.1.min.js"></script>
+    <script type="application/javascript" src="/javascripts/main.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel='stylesheet' href='/stylesheets/animation.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+  <div class="wrapper">
+      <div class="body-top"></div>
+      <div class="nav-bar">
+        <div class="title">
+            RE:SOURCES
+        </div>
+        <ul class="nav">
+            <li><a href="/">
+                    Home
+
+                </a></li>
+            <li><a href="/company" target="_self">
+                    About Us
+                    <i class="arrow-down"></i>
+                </a> </li>
+            <li><a href="/services" target="_self">
+                    Services
+                    <i class="arrow-down"></i>
+                </a></li>
+            <li><a href="/contact" target="_self">
+                    Contact US
+                </a></li>
+        </ul>
+      </div>
+      <div class="main">
+          <div class="photo-container">
+            <div class="photo-slide one"></div>
+            <div class="photo-slide two"></div>
+            <div class="photo-slide three"></div>
+            <div class="btn-more"></div>
+          </div>
+          <div class="bold-line"></div>
+          <div class="carousel-container">
+             <div class="carousel-slide one">
+                 <div class="logo"></div>
+                 <section>
+                     <p>The Groupe</p>
+                     <article>
+                        <header></header>
+                        <p>
+                            3rd Largest Communications Group Worldwide,
+                            Leader in Digital and Interactive Communication
+                            With activities spanning 108 countries on five continents,
+                            Publicis Groupe employs more than 63,000 professionals.
+                            Publicis Groupe offers local and international clients
+                            a complete range of communication services.
+                        </p>
+                     </article>
+                 </section>
+             </div>
+             <div class="carousel-slide two"></div>
+             <div class="carousel-indicator">
+                 <div>
+
+                 </div>
+                 <div>
+
+                 </div>
+             </div>
+          </div>
+          <div class="panel-container">
+            <ul>
+                <li>
+                    <ul>
+
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+
+                    </ul>
+                </li>
+            </ul>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="contact-bar">
+              <label></label>
+              <a href="/contact"></a>
+          </div>
+          <div class="info-bar">
+
+          </div>
+      </div>
+
+      <div class="nav-menu company"></div>
+      <div class="nav-menu services"></div>
+  </div>
   </body>
 </html>

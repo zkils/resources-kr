@@ -1,8 +1,193 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/*colors*/
+@dark-gray:#252525;
+@light-gray: #f2f1f1;
+@gray: #999999;
+@orange: #f18914;
+@footer-backcolor:#636363;
+@nav-active-color:#e42420;
+@nav-normal-color:white;
+
+/*images*/
+
+@slide-one:"/images/main_top_building.jpg";
+@slide-two:"/images/main_photo_02.jpg";
+@slide-three:"/images/main_photo_03.jpg";
+@publicis-logo:"/images/main_publicis_logo.png";
+
+/**/
+@site-width:1024px;
+
+/* Desktop Device */
+@media all and (min-width:1025px) {
+  body, .wrapper {
+    width: @site-width;
+  }
+  .nav-bar {
+    width: @site-width;
+  }
+}
+
+
 a {
-  color: #00B7FF;
+  color:@nav-normal-color;
+  text-decoration: none;
+  &:link, &:visited{
+    color:@nav-normal-color;
+    text-decoration: none;
+  }
+  &:active ,&:hover{
+    color:@nav-active-color;
+    text-decoration: none;
+  }
+}
+
+body,ul,div {
+  list-style: none;
+  margin:0px;
+  padding:0px;
+}
+
+
+.body-top{
+  height:70px;
+}
+
+/*top*/
+.nav-bar{
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:70px;
+  background-color:@dark-gray;
+  color:white;
+  z-index:100;
+
+  .title{
+    padding-left: 3em;
+    padding-top: 1em;
+    float: left;
+    font-size: 22px;
+    &:after{
+      color:@nav-active-color;
+      content:"KOREA";
+      background-color: @dark-gray;
+      font-weight: bold;
+    }
+  }
+  .nav{
+    float:right;
+    padding-right: 8em;
+    padding-top: 2em;
+    li{
+      float:left;
+      padding-right:2em;
+      a i.arrow-down{
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: @nav-normal-color transparent transparent transparent ;
+          border-width: 6px 6px 6px 6px;
+          margin: 0px 0 -5px 0;
+        }
+      a:hover > i.arrow-down{
+        border-color: @nav-active-color transparent transparent transparent !important;
+      }
+    }
+  }
+}
+
+/*메뉴 판*/
+.nav-menu{
+  background-color: @dark-gray;
+  position:fixed;
+  top:70px;
+  display: none;
+  &.company{
+    width:200px;
+    height:300px;
+  }
+  &.services{
+    width:400px;
+    height:300px;
+  }
+}
+
+
+
+/*middle메인 컨텐츠영역*/
+.main{
+
+  .photo-container{ /*탑 사진 슬라이드*/
+    height:500px;
+    position:relative;
+    .photo-slide{
+      height:500px;
+      position: absolute;
+      width:100%;
+      &.one{
+        background-image: url(@slide-one);
+      }
+      &.two{
+        opacity: 0;
+        background-image: url(@slide-two);
+      }
+      &.three{
+        opacity: 0;
+        background-image: url(@slide-three);
+
+      }
+    }
+  }
+
+  .bold-line{ /*구분선*/
+    height:50px;
+    background-color: @orange;
+  }
+  .carousel-container{ /*그룹소개 */
+    height:500px;
+    .carousel-slide{
+      &.one{
+        .logo {
+          background: url(@publicis-logo);
+        }
+      }
+      &.two{
+
+      }
+    }
+  }
+
+  /*서비스 패널*/
+  .panel-container{
+    background-color: @light-gray;
+    height:550px;
+    ul {
+      li{
+        ul{
+          li{
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*footer*/
+.footer{
+
+  .contact-bar{
+    height:90px;
+    background-color:@gray;
+  }
+  .info-bar{
+    height:150px;
+    background-color:@footer-backcolor;
+  }
 }

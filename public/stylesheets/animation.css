@@ -1,0 +1,93 @@
+@keyframes fadeInOut-first{
+    0%{        opacity: 1;    }
+    17%{        opacity: 1;    }
+    34%{        opacity: 0;    }
+    51%{        opacity: 0;    }
+    68%{        opacity: 0;    }
+    84%{        opacity: 0;    }
+    100%{        opacity: 1;    }
+}
+
+@keyframes fadeInOut-second{
+    0%{        opacity: 0;    }
+    17%{        opacity: 0;    }
+    34%{        opacity: 1;    }
+    51%{        opacity: 1;    }
+    68%{        opacity: 0;    }
+    84%{        opacity: 0;    }
+    100%{        opacity: 0;    }
+}
+
+@keyframes fadeInOut-third{
+    0%{        opacity: 0;    }
+    17%{        opacity: 0;    }
+    34%{        opacity: 0;    }
+    51%{        opacity: 0;    }
+    68%{        opacity: 1;    }
+    84%{        opacity: 1;    }
+    100%{        opacity: 0;    }
+}
+
+@-webkit-keyframes fadeInOut-first{
+    0%{        opacity: 1;    }
+    17%{        opacity: 1;    }
+    34%{        opacity: 0;    }
+    51%{        opacity: 0;    }
+    68%{        opacity: 0;    }
+    84%{        opacity: 0;    }
+    100%{        opacity: 1;    }
+}
+
+@-webkit-keyframes fadeInOut-second{
+    0%{        opacity: 0;    }
+    17%{        opacity: 0;    }
+    34%{        opacity: 1;    }
+    51%{        opacity: 1;    }
+    68%{        opacity: 0;    }
+    84%{        opacity: 0;    }
+    100%{        opacity: 0;    }
+}
+
+@-webkit-keyframes fadeInOut-third{
+    0%{        opacity: 0;    }
+    17%{        opacity: 0;    }
+    34%{        opacity: 0;    }
+    51%{        opacity: 0;    }
+    68%{        opacity: 1;    }
+    84%{        opacity: 1;    }
+    100%{        opacity: 0;    }
+}
+
+
+.photo-slide.one{
+    animation-name:fadeInOut-first;
+    animation-duration:18s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name:fadeInOut-first;
+    -webkit-animation-duration:18s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count: infinite;
+}
+.photo-slide.two{
+    animation-name:fadeInOut-second;
+    animation-duration:18s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name:fadeInOut-second;
+    -webkit-animation-duration:18s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count: infinite;
+}
+.photo-slide.three{
+    animation-name:fadeInOut-third;
+    animation-duration:18s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name:fadeInOut-third;
+    -webkit-animation-duration:18s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count: infinite;
+
+
+}
