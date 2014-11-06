@@ -1,5 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image:url(@body-pattern);
 }
 
 /*colors*/
@@ -12,22 +13,22 @@ body {
 @nav-normal-color:white;
 
 /*images*/
-
+@body-pattern:"/images/footer_lodyas.png";
 @slide-one:"/images/main_top_building.jpg";
 @slide-two:"/images/main_photo_02.jpg";
 @slide-three:"/images/main_photo_03.jpg";
 @publicis-logo:"/images/main_publicis_logo.png";
 
 /**/
-@site-width:1024px;
+@site-width:1600px;
 
 /* Desktop Device */
-@media all and (min-width:1025px) {
-  body, .wrapper {
+@media all and (min-width:1601px) {
+  .wrapper {
     width: @site-width;
   }
   .nav-bar {
-    width: @site-width;
+    width: @site-width !important;
   }
 }
 
@@ -45,12 +46,15 @@ a {
   }
 }
 
-body,ul,div {
+body,ul,div,p {
   list-style: none;
   margin:0px;
   padding:0px;
 }
 
+.wrapper{
+  margin:auto;
+}
 
 .body-top{
   height:70px;
@@ -60,8 +64,9 @@ body,ul,div {
 .nav-bar{
   position:fixed;
   top:0px;
-  left:0px;
   height:70px;
+  width:100%;
+  margin:auto;
   background-color:@dark-gray;
   color:white;
   z-index:100;
@@ -149,6 +154,7 @@ body,ul,div {
     background-color: @orange;
   }
   .carousel-container{ /*그룹소개 */
+    background-color: white;
     height:500px;
     .carousel-slide{
       &.one{
