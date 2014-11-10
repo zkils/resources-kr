@@ -3,9 +3,12 @@
   <head>
     <title><%= title %></title>
     <script type="application/javascript" src="/javascripts/jquery-1.11.1.min.js"></script>
+    <script type="application/javascript" src="/javascripts/jquery-ui.min.js"></script>
     <script type="application/javascript" src="/javascripts/main.js"></script>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-      <link rel='stylesheet' href='/stylesheets/animation.css' />
+      <link rel='stylesheet' href='/stylesheets/jquery-ui.min.css' />
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/animation.css' />
+
   </head>
   <body>
   <div class="wrapper">
@@ -44,10 +47,10 @@
              <div class="carousel-slide one">
                  <div class="logo"></div>
                  <section>
-                     <p>The Groupe</p>
+                     <p class="title">The Groupe</p>
                      <article>
                         <header></header>
-                        <p>
+                        <p class="desc">
                             3rd Largest Communications Group Worldwide,
                             Leader in Digital and Interactive Communication
                             With activities spanning 108 countries on five continents,
@@ -58,34 +61,51 @@
                      </article>
                  </section>
              </div>
-             <div class="carousel-slide two"></div>
-             <div class="carousel-indicator">
-                 <div>
-
-                 </div>
-                 <div>
-
-                 </div>
+             <div class="carousel-slide two">
+                 <div class="logo"></div>
+                 <section>
+                     <p class="title">Re:Sources</p>
+                     <article>
+                         <header></header>
+                         <p class="desc">
+                             3rd Largest Communications Group Worldwide,
+                             Leader in Digital and Interactive Communication
+                             With activities spanning 108 countries on five continents,
+                             Publicis Groupe employs more than 63,000 professionals.
+                             Publicis Groupe offers local and international clients
+                             a complete range of communication services.
+                         </p>
+                     </article>
+                 </section>
              </div>
+
+          </div>
+          <div class="carousel-indicator">
+              <div class="btn-wrapper">
+                  <div class="btn first on"></div>
+                  <div class="btn second off"></div>
+              </div>
           </div>
           <div class="panel-container">
-            <ul>
-                <li>
+              <div class="panel-wrapper">
                     <ul>
+                        <li>
+                            <ul>
 
-                    </ul>
-                </li>
-                <li>
-                    <ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
 
-                    </ul>
-                </li>
-                <li>
-                    <ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
 
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
+              </div>
           </div>
       </div>
       <div class="footer">

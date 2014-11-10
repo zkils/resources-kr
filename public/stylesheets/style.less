@@ -4,7 +4,7 @@ body {
 }
 
 /*colors*/
-@dark-gray:#252525;
+@dark-gray: #151515;
 @light-gray: #f2f1f1;
 @gray: #999999;
 @orange: #f18914;
@@ -20,10 +20,11 @@ body {
 @publicis-logo:"/images/main_publicis_logo.png";
 
 /**/
-@site-width:1600px;
+@site-width:1024px;
+@pc-width:1025px;
 
 /* Desktop Device */
-@media all and (min-width:1601px) {
+@media all and (min-width:@pc-width) {
   .wrapper {
     width: @site-width;
   }
@@ -54,6 +55,7 @@ body,ul,div,p {
 
 .wrapper{
   margin:auto;
+  background-color: white;
 }
 
 .body-top{
@@ -122,11 +124,8 @@ body,ul,div,p {
   }
 }
 
-
-
 /*middle메인 컨텐츠영역*/
 .main{
-
   .photo-container{ /*탑 사진 슬라이드*/
     height:500px;
     position:relative;
@@ -144,7 +143,6 @@ body,ul,div,p {
       &.three{
         opacity: 0;
         background-image: url(@slide-three);
-
       }
     }
   }
@@ -155,15 +153,80 @@ body,ul,div,p {
   }
   .carousel-container{ /*그룹소개 */
     background-color: white;
-    height:500px;
+    height:450px;
+    position: absolute;
+    width:@site-width;
+    overflow: hidden;
     .carousel-slide{
-      &.one{
+      position: absolute;
+      width:900px;
+      height:400px;
+      left:0;
+      right:0;
+      margin:auto;
+
+      &.one , &.two{
+        background:white;
         .logo {
-          background: url(@publicis-logo);
+          position: relative;
+          width:350px;
+          height:350px;
+          top:50px;
+          float: left;
+          background: url(@publicis-logo) no-repeat;
+          background-size:contain;
+        }
+
+        section{
+          position: relative;
+          top:80px;
+          float:left;
+          p.title{
+            margin-left:-50px;
+            font-size:50px;
+            font-weight: bold;
+          }
+          article p.desc{
+            font-size:20px;
+            width:450px;
+          }
         }
       }
       &.two{
-
+        left:@site-width;
+      }
+    }
+  }
+  .carousel-indicator{
+    height: 50px;
+    position: relative;
+    top: 400px;
+    .btn-wrapper {
+      width: 90px;
+      position: absolute;
+      left:0;
+      right:0;
+      margin:auto;
+      .btn {
+        background-color: @gray;
+        float:left;
+        width: 15px;
+        height: 15px;
+        border: 1px;
+        border-radius: 15px;
+        margin:15px;
+        -webkit-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+        &.on{
+          background-color:@dark-gray;
+        }
+        &:active {
+          background-color:black !important;
+        }
+        &.off:hover {
+          background-color: #777373;
+        }
       }
     }
   }
@@ -172,22 +235,30 @@ body,ul,div,p {
   .panel-container{
     background-color: @light-gray;
     height:550px;
-    ul {
-      li{
-        ul{
-          li{
+    position: relative;
+    top: 400px;
+    .panel-wrapper{
 
+      ul {
+        li{
+          ul{
+            li{
+
+            }
           }
         }
       }
     }
+
+
   }
 
 }
 
 /*footer*/
 .footer{
-
+  position:relative;
+  top: 400px;
   .contact-bar{
     height:90px;
     background-color:@gray;
