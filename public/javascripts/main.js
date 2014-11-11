@@ -6,6 +6,8 @@ $(document).ready(function(){
     //$(".photo-slide.one").siblings().fadeOut();
     //animatePhotoSlide();
     $(".carousel-indicator .btn").on("click",carouselSlide);
+    $(".panel-list").children(".grid_1").on("click",showPopup);
+    $(".popup>.btn.close").on("click",closePopup);
 });
 
 function carouselSlide(){
@@ -17,38 +19,44 @@ function carouselSlide(){
         if(index==0){
             $slide.first().animate({
                 left:0,
-                duration:3000
+                duration:5000
             },"easeInCubic")
             $slide.last().animate({
                 left:2400,
-                duration:3000
+                duration:5000
             },"easeInCubic")
         }else{
             $slide.first().animate({
                 left:-2400,
-                duration:3000
+                duration:5000
             },"easeInCubic")
             $slide.last().animate({
                 left:0,
-                duration:3000
+                duration:5000
             },"easeInCubic")
         }
 
-        /*
-        $slide.each(function(){
-            var $this = $(this);
-            if(index==0){
-                $this.
-            }else{
-
-            }
-        });
-        */
-        //$slide = $(".carousel-slide").eq(index);
         $this.removeClass("off").addClass("on");
         $this.siblings().removeClass("on").addClass("off");
 
-
-
     }
+}
+
+function showPopup(){
+    var $this = $(this);
+    var targetId , $targetPopup;
+
+    targetId = $this.attr("class").replace("grid_1",'').trim();
+    $targetPopup = $("."+targetId+".popup");
+
+    //$this.addClass("rotate");
+
+    $(".mask.panel").fadeIn();
+    $targetPopup.fadeIn();
+}
+
+function closePopup(){
+    $(".mask.panel").fadeOut();
+    $(this).parent().fadeOut();
+    //$(this).parent().toggle({ effect: "scale", direction: "horizontal", duration:1000 })
 }

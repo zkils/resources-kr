@@ -12,6 +12,21 @@ body {
 @nav-active-color:#e42420;
 @nav-normal-color:white;
 
+@finance-color:#38bcdf;
+@accounting-color:#B1CC4A;
+@procurement-color:#FFAB27;
+@legal-color:#865C38;
+@tax-color:#D84319;
+@hr-color:#5F79BB;
+@it-color:#B42375;
+
+
+
+
+
+
+
+
 /*images*/
 @body-pattern:"/images/footer_lodyas.png";
 @slide-one:"/images/main_top_building.jpg";
@@ -20,7 +35,7 @@ body {
 @publicis-logo:"/images/main_publicis_logo.png";
 
 /**/
-@site-width:1024px;
+@site-width:1600px;
 @pc-width:1025px;
 
 /* Desktop Device */
@@ -234,25 +249,86 @@ body,ul,div,p {
   /*서비스 패널*/
   .panel-container{
     background-color: @light-gray;
-    height:550px;
+    height:650px;
     position: relative;
     top: 400px;
+
     .panel-wrapper{
-
-      ul {
+      position: absolute;
+      display:block;
+      width:1330px;
+      height:560px;
+      left:0;
+      right:0;
+      margin:auto;
+      top:30px;
+      .panel-title{
+        font-size:20px;
+        margin-left: 10px;
+      }
+      ul,li{
+        box-sizing: border-box;
+      }
+      .panel-list{
         li{
-          ul{
-            li{
+          display: inline-block;
+          height:180px;
+          margin:3px;
+          color:white;
+          float:left;
+        }
+        .grid_1{
+          width:180px;
+          text-align: center;
+          line-height: 180px;
+          cursor: pointer;
+          p{
+            font-size:18px;
+            font-weight: bold;
+          }
+          &:hover{
+            opacity: 0.9;
+          }
 
-            }
+        }
+        .grid_2{
+          width:360px;
+          &:last-child{
+            background-color: rgb(246, 255, 237);
           }
         }
+        .grid_3{
+          width:546px;
+          img{
+            width: 546px;
+            height: 180px;
+          }
+        }
+        .finance-pane{
+          background:@finance-color;
+        }
+        .accounting-pane{
+          background:@accounting-color;
+        }
+        .procurement-pane{
+          background:@procurement-color;
+        }
+        .legal-pane{
+          background:@legal-color;
+        }
+        .tax-pane{
+          background:@tax-color;
+        }
+        .hr-pane{
+          background:@hr-color;
+        }
+        .it-pane{
+          background:@it-color;
+        }
+
       }
     }
-
-
   }
-
 }
 
 /*footer*/
@@ -262,9 +338,190 @@ body,ul,div,p {
   .contact-bar{
     height:90px;
     background-color:@gray;
+    text-align: center;
+    .down-arrow{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+      border-width: 8px 8px 8px 8px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
+    p{
+      display: inline-block;
+      text-align: center;
+      font-size: 18px;
+      color: white;
+      margin: 35px 15px 0 0;
+    }
+    .btn.contact{
+      display: inline-block;
+      background-color: #e84b18;
+      border-radius: 9px;
+      width: 120px;
+      height: 45px;
+      position: relative;
+      font-weight: bold;
+      text-align: center;
+      line-height: 45px;
+      &:hover{
+        opacity: 0.9;
+      }
+      &:hover,&:active,&:link, &:visited{
+        color:white;
+      }
+    }
   }
   .info-bar{
     height:150px;
     background-color:@footer-backcolor;
+    div{
+      color :rgb(214, 214, 214);
+      display: inline-block;
+    }
+    .company-name{
+      font-size:30px;
+      margin: 50px 500px 0 170px;
+    }
+    .icon-wrapper{
+      a, div, p{
+        color: #CFCFCF;
+        margin:5px;
+        display: inline-block;
+      }
+      p {
+        position: relative;
+        top: -14px;
+        &:hover{
+          opacity: 0.7;
+        }
+        &:active{
+          opacity: 0.9;
+        }
+      }
+      a img{
+        top: 5px;
+        position: relative;
+        &:hover{
+          opacity: 0.7;
+        }
+        &:active{
+          opacity: 0.9;
+        }
+      }
+
+
+    }
+    .btn.top{
+      cursor:pointer;
+      width:50px;
+      height:50px;
+      background-color: gray;
+      margin-left: 50px;
+      &:hover{
+        opacity: 0.7;
+      }
+      &:active{
+        opacity: 0.9;
+      }
+    }
   }
+}
+
+
+.mask{
+  background-color: #000000;
+  opacity: 0.22;
+  position: fixed;
+  width:2000px;
+  height:2000px;
+  z-index:500;
+  display: none;
+  top:0px;
+  left:0px;
+}
+
+.popup{
+  position: absolute;
+  width: 900px;
+  height: 480px;
+  top: 1160px;
+  left: 22em;
+  border-radius: 15px;
+  background: white;
+  display: none;
+  z-index:501;
+
+  .btn.close{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    top: 20px;
+    left: 855px;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    &:before{
+      margin-left: 5px;
+      margin-top: -4px;
+      font-weight: bold;
+      font-size: 27px;
+      content: "x";
+      position: absolute;
+      opacity: 0.4;
+    }
+    &:hover:before{
+      opacity: 0.9;
+    }
+    &:active:before{
+      opacity: 0.7;
+    }
+  }
+
+  &.finance-pane{
+    background-color: @finance-color;
+  }
+  &.accounting-pane{
+    background-color:@accounting-color;
+  }
+  &.procurement-pane{
+    background-color:@procurement-color;
+  }
+  &.legal-pane{
+    background-color:@legal-color;
+  }
+  &.tax-pane{
+    background-color:@tax-color;
+  }
+  &.hr-pane{
+    background-color:@hr-color;
+  }
+  &.it-pane{
+    background-color:@it-color;
+    .title{
+      position: relative;
+      top:50px;
+      font-size:50px;
+      left:50px;
+      color:white;
+    }
+    .desc{
+      position: relative;
+      font-size:30px;
+      top:120px;
+      left:50px;
+      color:white;
+    }
+  }
+}
+
+.pipe{
+  border-left: 1px solid #CFCFCF;
+  height:30px;
+  width:1px;
 }
