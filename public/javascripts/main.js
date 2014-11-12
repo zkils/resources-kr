@@ -8,8 +8,10 @@ $(document).ready(function(){
     $(".carousel-indicator .btn").on("click",carouselSlide);
     $(".panel-list").children(".grid_1").on("click",showPopup);
     $(".popup .btn.close").on("click",closePopup);
-    $(".btn.top").on("click",animateToTop);
+    initCommonFunc();
+
 });
+
 
 function carouselSlide(){
     var $this = $(this);
@@ -45,11 +47,11 @@ function carouselSlide(){
 
 function showPopup(){
     var $this = $(this);
-    var targetId , $targetPopup;
+    var targetName , $targetPopup;
 
-    targetId = $this.attr("class").replace("grid_1",'').trim();
-    //$targetPopup = $("."+targetId+".popup");
-    $targetPopup = $("."+targetId+".pane").parent();
+    targetName = $this.attr("class").replace("grid_1",'').trim();
+    //$targetPopup = $("."+targetName+".popup");
+    $targetPopup = $("."+targetName+".pane").parent();
 
     //$this.addClass("rotate");
 
@@ -63,5 +65,3 @@ function closePopup(){
     $(".popup").fadeOut();
     //$(this).parent().toggle({ effect: "scale", direction: "horizontal", duration:1000 })
 }
-
-function animateToTop(){ $("body").animate({scrollTop:0},'1000','swing')}

@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <script type="application/javascript" src="/javascripts/jquery-1.11.1.min.js"></script>
     <script type="application/javascript" src="/javascripts/jquery-ui.min.js"></script>
+      <script type="application/javascript" src="/javascripts/common.js"></script>
     <script type="application/javascript" src="/javascripts/main.js"></script>
       <link rel='stylesheet' href='/stylesheets/jquery-ui.min.css' />
       <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -22,11 +23,13 @@
                     Home
 
                 </a></li>
-            <li><a href="/company" target="_self">
+            <li class="company nav-item">
+                <a href="/company" target="_self">
                     About Us
                     <i class="arrow-down"></i>
                 </a> </li>
-            <li><a href="/services" target="_self">
+            <li class="services nav-item">
+                <a href="/services" target="_self">
                     Services
                     <i class="arrow-down"></i>
                 </a></li>
@@ -148,8 +151,50 @@
           </div>
       </div>
 
-      <div class="nav-menu company"></div>
-      <div class="nav-menu services"></div>
+      <div class="nav-menu company">
+          <ul>
+              <li>
+                  <a href="/company?pageid=resources" target="_self">Re:Sources</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=groupe" target="_self">Publicis Groupe</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=ceo" target="_self">CEO Comment</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=agency" target="_self">Agencies</a>
+              </li>
+          </ul>
+      </div>
+      <div class="nav-menu services">
+          <ul>
+              <li>
+                  <a href="/company?pageid=finance" target="_self">Finance</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=accounting" target="_self">Accounting</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=procurement" target="_self">Procurement</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=tax" target="_self">Tax</a>
+              </li>
+          </ul>
+          <ul>
+              <li>
+                  <a href="/company?pageid=hr" target="_self">HR & Payroll</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=legal" target="_self">Legal</a>
+              </li>
+              <li>
+                  <a href="/company?pageid=it" target="_self">IT Support</a>
+              </li>
+              <li></li>
+          </ul>
+      </div>
 
       <div class="panel mask"></div>
 
@@ -206,6 +251,8 @@
           </div>
       </div>
 
+
+      <div class="menu-mask"></div>
 
   </div>
   </body>

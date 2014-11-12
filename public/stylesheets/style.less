@@ -105,8 +105,13 @@ body,ul,div,p {
     padding-right: 8em;
     padding-top: 2em;
     li{
+      &:first-child{
+        width:80px;
+      }
       float:left;
-      padding-right:2em;
+//      padding-right:2em;
+      height: 40px;
+      width: 100px;
       a i.arrow-down{
           display: inline-block;
           width: 0;
@@ -129,13 +134,39 @@ body,ul,div,p {
   position:fixed;
   top:70px;
   display: none;
+  z-index:100;
+  box-sizing: border-box;
+//  border-left: 1px solid gray;
+//  border-right: 1px solid gray;
+//  border-bottom: 1px solid gray;
   &.company{
-    width:200px;
-    height:300px;
+    right: 280px;
+    width: 150px;
+    height: 160px;
   }
   &.services{
-    width:400px;
-    height:300px;
+    right: 100px;
+    width: 299px;
+    height: 160px;
+    ul:last-child{
+      margin-left:-1px;
+    }
+  }
+  ul{
+    float: left;
+  }
+  li{
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    border-left:1px solid rgb(70, 70, 70);
+    border-right:1px solid rgb(70, 70, 70);
+    border-bottom:1px solid rgb(70, 70, 70);
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
   }
 }
 
@@ -465,25 +496,25 @@ body,ul,div,p {
   left:0px;
 }
 
-.popup{
+.popup {
   position: absolute;
-  left:0px;
+  left: 0px;
   top: 1160px;
   width: 100%;
 
   background: transparent;
   display: none;
-  z-index:501;
-  .pane{
+  z-index: 501;
+  .pane {
     width: 900px;
     height: 480px;
     position: absolute;
-    left:0px;
-    right:0px;
-    margin:auto;
+    left: 0px;
+    right: 0px;
+    margin: auto;
     border-radius: 15px;
     background: white;
-    .btn.close{
+    .btn.close {
       position: absolute;
       width: 25px;
       height: 25px;
@@ -495,7 +526,7 @@ body,ul,div,p {
       text-decoration: none;
       color: black;
 
-      &:before{
+      &:before {
         margin-left: 5px;
         margin-top: -4px;
         font-weight: bold;
@@ -504,60 +535,72 @@ body,ul,div,p {
         position: absolute;
         opacity: 0.4;
       }
-      &:hover:before{
+      &:hover:before {
         opacity: 0.9;
       }
-      &:active:before{
+      &:active:before {
         opacity: 0.7;
       }
 
     }
-    .title{
+    .title {
       position: relative;
-      top:50px;
-      font-size:50px;
-      left:50px;
-      color:white;
+      top: 50px;
+      font-size: 50px;
+      left: 50px;
+      color: white;
     }
-    .desc{
+    .desc {
       position: relative;
-      font-size:30px;
-      top:120px;
-      left:50px;
-      color:white;
-      width:750px
+      font-size: 30px;
+      top: 120px;
+      left: 50px;
+      color: white;
+      width: 750px
     }
 
-    &.finance-pane{
+    &.finance-pane {
       background-color: @finance-color;
     }
-    &.accounting-pane{
-      background-color:@accounting-color;
+    &.accounting-pane {
+      background-color: @accounting-color;
     }
-    &.procurement-pane{
-      background-color:@procurement-color;
+    &.procurement-pane {
+      background-color: @procurement-color;
     }
-    &.legal-pane{
-      background-color:@legal-color;
+    &.legal-pane {
+      background-color: @legal-color;
     }
-    &.tax-pane{
-      background-color:@tax-color;
+    &.tax-pane {
+      background-color: @tax-color;
     }
-    &.hr-pane{
-      background-color:@hr-color;
+    &.hr-pane {
+      background-color: @hr-color;
     }
-    &.it-pane{
-      background-color:@it-color;
+    &.it-pane {
+      background-color: @it-color;
 
     }
   }
 
 
-
 }
+
 
 .pipe{
   border-left: 1px solid #CFCFCF;
   height:30px;
   width:1px;
+}
+
+.menu-mask {
+  display: none;
+  position: fixed;
+  width: 400px;
+  height: 260px;
+  right: 70px;
+  z-index: 90;
+  background-color: transparent;
+  top: 0px;
+
 }
