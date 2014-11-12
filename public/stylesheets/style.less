@@ -387,6 +387,8 @@ body,ul,div,p {
       margin: 50px 500px 0 170px;
     }
     .icon-wrapper{
+      position: relative;
+      top: 10px;
       a, div, p{
         color: #CFCFCF;
         margin:5px;
@@ -416,11 +418,25 @@ body,ul,div,p {
 
     }
     .btn.top{
-      cursor:pointer;
-      width:50px;
-      height:50px;
-      background-color: gray;
-      margin-left: 50px;
+      position: relative;
+      top: -10px;
+      cursor: pointer;
+      width:27px;
+      height:27px;
+      margin-left: 30px;
+      background-color: #000000;
+
+      .arrow-top{
+        width: 8px;
+        height: 8px;
+        border-left: 3px solid white;
+        border-top: 3px solid #ffffff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+        left: 8px;
+      }
       &:hover{
         opacity: 0.7;
       }
@@ -430,7 +446,12 @@ body,ul,div,p {
     }
   }
 }
-
+.anchor{
+  visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
+}
 
 .mask{
   background-color: #000000;
@@ -466,6 +487,7 @@ body,ul,div,p {
     cursor: pointer;
     text-decoration: none;
     color: black;
+
     &:before{
       margin-left: 5px;
       margin-top: -4px;

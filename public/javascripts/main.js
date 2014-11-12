@@ -8,6 +8,7 @@ $(document).ready(function(){
     $(".carousel-indicator .btn").on("click",carouselSlide);
     $(".panel-list").children(".grid_1").on("click",showPopup);
     $(".popup>.btn.close").on("click",closePopup);
+    $(".btn.top").on("click",animateToTop);
 });
 
 function carouselSlide(){
@@ -60,3 +61,5 @@ function closePopup(){
     $(this).parent().fadeOut();
     //$(this).parent().toggle({ effect: "scale", direction: "horizontal", duration:1000 })
 }
+
+function animateToTop(){ $("body").animate({scrollTop:0},'1000','swing')}
