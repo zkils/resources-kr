@@ -425,7 +425,7 @@ body,ul,div,p {
       height:27px;
       margin-left: 30px;
       background-color: #000000;
-
+      border-radius: 5px;
       .arrow-top{
         width: 8px;
         height: 8px;
@@ -467,64 +467,51 @@ body,ul,div,p {
 
 .popup{
   position: absolute;
-  width: 900px;
-  height: 480px;
+  left:0px;
   top: 1160px;
-  left: 22em;
-  border-radius: 15px;
-  background: white;
+  width: 100%;
+
+  background: transparent;
   display: none;
   z-index:501;
-
-  .btn.close{
+  .pane{
+    width: 900px;
+    height: 480px;
     position: absolute;
-    width: 25px;
-    height: 25px;
+    left:0px;
+    right:0px;
+    margin:auto;
     border-radius: 15px;
-    top: 20px;
-    left: 855px;
-    background-color: white;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-
-    &:before{
-      margin-left: 5px;
-      margin-top: -4px;
-      font-weight: bold;
-      font-size: 27px;
-      content: "x";
+    background: white;
+    .btn.close{
       position: absolute;
-      opacity: 0.4;
-    }
-    &:hover:before{
-      opacity: 0.9;
-    }
-    &:active:before{
-      opacity: 0.7;
-    }
-  }
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      top: 20px;
+      left: 855px;
+      background-color: white;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
 
-  &.finance-pane{
-    background-color: @finance-color;
-  }
-  &.accounting-pane{
-    background-color:@accounting-color;
-  }
-  &.procurement-pane{
-    background-color:@procurement-color;
-  }
-  &.legal-pane{
-    background-color:@legal-color;
-  }
-  &.tax-pane{
-    background-color:@tax-color;
-  }
-  &.hr-pane{
-    background-color:@hr-color;
-  }
-  &.it-pane{
-    background-color:@it-color;
+      &:before{
+        margin-left: 5px;
+        margin-top: -4px;
+        font-weight: bold;
+        font-size: 27px;
+        content: "x";
+        position: absolute;
+        opacity: 0.4;
+      }
+      &:hover:before{
+        opacity: 0.9;
+      }
+      &:active:before{
+        opacity: 0.7;
+      }
+
+    }
     .title{
       position: relative;
       top:50px;
@@ -538,8 +525,35 @@ body,ul,div,p {
       top:120px;
       left:50px;
       color:white;
+      width:750px
+    }
+
+    &.finance-pane{
+      background-color: @finance-color;
+    }
+    &.accounting-pane{
+      background-color:@accounting-color;
+    }
+    &.procurement-pane{
+      background-color:@procurement-color;
+    }
+    &.legal-pane{
+      background-color:@legal-color;
+    }
+    &.tax-pane{
+      background-color:@tax-color;
+    }
+    &.hr-pane{
+      background-color:@hr-color;
+    }
+    &.it-pane{
+      background-color:@it-color;
+
     }
   }
+
+
+
 }
 
 .pipe{

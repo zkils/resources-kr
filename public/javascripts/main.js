@@ -7,7 +7,7 @@ $(document).ready(function(){
     //animatePhotoSlide();
     $(".carousel-indicator .btn").on("click",carouselSlide);
     $(".panel-list").children(".grid_1").on("click",showPopup);
-    $(".popup>.btn.close").on("click",closePopup);
+    $(".popup .btn.close").on("click",closePopup);
     $(".btn.top").on("click",animateToTop);
 });
 
@@ -48,7 +48,8 @@ function showPopup(){
     var targetId , $targetPopup;
 
     targetId = $this.attr("class").replace("grid_1",'').trim();
-    $targetPopup = $("."+targetId+".popup");
+    //$targetPopup = $("."+targetId+".popup");
+    $targetPopup = $("."+targetId+".pane").parent();
 
     //$this.addClass("rotate");
 
@@ -58,7 +59,8 @@ function showPopup(){
 
 function closePopup(){
     $(".mask.panel").fadeOut();
-    $(this).parent().fadeOut();
+    //$(this).parent().fadeOut();
+    $(".popup").fadeOut();
     //$(this).parent().toggle({ effect: "scale", direction: "horizontal", duration:1000 })
 }
 
