@@ -3,15 +3,15 @@
  */
 
 $(document).ready(function(){
-    //$(".photo-slide.one").siblings().fadeOut();
-    //animatePhotoSlide();
+    initCommonFunc();
+    initMain();
+});
+
+function initMain(){
     $(".carousel-indicator .btn").on("click",carouselSlide);
     $(".panel-list").children(".grid_1").on("click",showPopup);
     $(".popup .btn.close").on("click",closePopup);
-    initCommonFunc();
-
-});
-
+}
 
 function carouselSlide(){
     var $this = $(this);
@@ -38,10 +38,8 @@ function carouselSlide(){
                 duration:5000
             },"easeInCubic")
         }
-
         $this.removeClass("off").addClass("on");
         $this.siblings().removeClass("on").addClass("off");
-
     }
 }
 
@@ -50,18 +48,14 @@ function showPopup(){
     var targetName , $targetPopup;
 
     targetName = $this.attr("class").replace("grid_1",'').trim();
-    //$targetPopup = $("."+targetName+".popup");
     $targetPopup = $("."+targetName+".pane").parent();
 
-    //$this.addClass("rotate");
-
-    $(".mask.panel").fadeIn();
+    $(".mask.panel").fadeIn().one("click",closePopup);
     $targetPopup.fadeIn();
+
 }
 
 function closePopup(){
     $(".mask.panel").fadeOut();
-    //$(this).parent().fadeOut();
     $(".popup").fadeOut();
-    //$(this).parent().toggle({ effect: "scale", direction: "horizontal", duration:1000 })
 }

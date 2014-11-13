@@ -36,6 +36,4 @@ function hideNavMenu(){
     $(".menu-mask").hide();
 }
 
-
-
 function animateToTop(){ $("body").animate({scrollTop:0},'1000','swing')}
