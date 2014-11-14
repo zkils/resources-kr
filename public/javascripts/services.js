@@ -4,5 +4,10 @@
 $(document).ready(function(){
 
     initCommonFunc();
+    initServicesElement();
 
 });
+
+function initServicesElement(){
+
+}

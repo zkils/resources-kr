@@ -8,7 +8,7 @@
     <script type="application/javascript" src="/javascripts/services.js"></script>
     <link rel='stylesheet' href='/stylesheets/jquery-ui.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/animation.css' />
+    <link rel='stylesheet' href='/stylesheets/services.css' />
 
 </head>
 <body>
@@ -21,7 +21,6 @@
     <ul class="nav">
         <li><a href="/">
                 Home
-
             </a></li>
         <li class="company nav-item">
             <a href="/company" target="_self">
@@ -40,86 +39,63 @@
 </div>
 <div class="main">
     <div class="photo-container">
-        <div class="photo-slide one"></div>
-        <div class="photo-slide two"></div>
-        <div class="photo-slide three"></div>
-        <div class="btn-more"></div>
+        <p class="photo-label one">Our Services</p>
+        <p class="photo-label two"></p>
+        <div id="scrollDown"></div>
+        <div class="photo-slide services">
+            <div>
+
+            </div>
+        </div>
+
     </div>
     <div class="bold-line"></div>
-    <div class="carousel-container">
-        <div class="carousel-slide one">
-            <div class="logo"></div>
-            <section>
-                <p class="title">The Groupe</p>
-                <article>
-                    <header></header>
-                    <p class="desc">
-                        3rd Largest Communications Group Worldwide,
-                        Leader in Digital and Interactive Communication
-                        With activities spanning 108 countries on five continents,
-                        Publicis Groupe employs more than 63,000 professionals.
-                        Publicis Groupe offers local and international clients
-                        a complete range of communication services.
-                    </p>
-                </article>
-            </section>
-        </div>
-        <div class="carousel-slide two">
-            <div class="logo"></div>
-            <section>
-                <p class="title">Re:Sources</p>
-                <article>
-                    <header></header>
-                    <p class="desc">
-                        3rd Largest Communications Group Worldwide,
-                        Leader in Digital and Interactive Communication
-                        With activities spanning 108 countries on five continents,
-                        Publicis Groupe employs more than 63,000 professionals.
-                        Publicis Groupe offers local and international clients
-                        a complete range of communication services.
-                    </p>
-                </article>
-            </section>
+    <div class="service-page-main">
+        <div class="wrapper">
+            <ul class="icon-set">
+                <li class="finance btn">
+                    <i></i>
+                    <p>Finance</p>
+                </li>
+                <li class="accounting btn">
+                    <i></i>
+                    <p>Accounting</p>
+                </li>
+                <li class="procurement btn">
+                    <i></i>
+                    <p>Procurement</p>
+                </li>
+                <li class="legal btn">
+                    <i></i>
+                    <p>Legal</p>
+                </li>
+                <li class="tax btn">
+                    <i></i>
+                    <p>Tax</p>
+                </li>
+                <li class="hr btn">
+                    <i></i>
+                    <p>HR & Payroll</p>
+                </li>
+                <li class="it btn">
+                    <i></i>
+                    <p>IT Support</p>
+                </li>
+            </ul>
+            <div class="finance page">
+                <div class="label-tag">
+                    <p>Finance</p>
+                </div>
+                <div class="paper">
+
+                </div>
+
+            </div>
+            <div class="page-seperatoer"></div>
         </div>
 
     </div>
-    <div class="carousel-indicator">
-        <div class="btn-wrapper">
-            <div class="btn first on"></div>
-            <div class="btn second off"></div>
-        </div>
-    </div>
-    <div class="panel-container">
 
-        <ul class="panel-wrapper">
-            <li class="panel-title">Services</li>
-            <li>
-                <ul class="panel-list one">
-                    <li class="grid_1 finance-pane"><p>Finance</p></li>
-                    <li class="grid_2"><img src="/images/panel_image_01.png"/></li>
-                    <li class="grid_1 accounting-pane"><p>Accounting</p></li>
-                    <li class="grid_2"><img src="/images/panel_image_02.png"/></li>
-                    <li class="grid_1 procurement-pane"><p>Procurement</p></li>
-                </ul>
-            </li>
-            <li>
-                <ul class="panel-list two">
-                    <li class="grid_2"><img src="/images/panel_image_03.png"/></li>
-                    <li class="grid_1 legal-pane"><p>Legal</p></li>
-                    <li class="grid_3"><img src="/images/panel_image_04.png"/></li>
-                    <li class="grid_1 tax-pane"><p>Tax</p></li>
-                </ul>
-            </li>
-            <li>
-                <ul class="panel-list three">
-                    <li class="grid_1 hr-pane"><p>HR & Payroll</p></li>
-                    <li class="grid_3"><img src="/images/panel_image_05.png"/></li>
-                    <li class="grid_1 it-pane"><p>IT Support</p></li>
-                    <li class="grid_2"><img src="/images/panel_image_06.png"/></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
 </div>
 <div class="footer">
     <div class="contact-bar">
@@ -194,61 +170,6 @@
         </li>
         <li></li>
     </ul>
-</div>
-
-<div class="panel mask"></div>
-
-
-<div class="popup">
-    <div class="finance-pane pane">
-        <div class="btn close"></div>
-        <p class="title">Finance</p>
-        <div class="desc">Finance </div>
-    </div>
-</div>
-<div class="popup">
-    <div class="accounting-pane pane">
-        <div class="btn close"></div>
-        <p class="title">Accounting</p>
-        <div class="desc">Accounting </div>
-    </div>
-</div>
-<div class="popup">
-    <div class="procurement-pane pane">
-        <div class="btn close"></div>
-        <p class="title">Procurement</p>
-        <div class="desc">Procurement </div>
-    </div>
-</div>
-<div class="popup">
-    <div class="legal-pane pane">
-        <div class="btn close"></div>
-        <p class="title">Legal</p>
-        <div class="desc">Legal </div>
-    </div>
-</div>
-<div class="popup">
-    <div class="tax-pane pane">
-        <div class="btn close"></div>
-        <p class="title">Tax</p>
-        <div class="desc">Tax </div>
-    </div>
-</div>
-<div class="popup">
-    <div class="hr-pane pane">
-        <div class="btn close"></div>
-        <p class="title">HR & Payroll</p>
-        <div class="desc">HR & Payroll </div>
-    </div>
-</div>
-<div class="popup">
-    <div class="it-pane pane">
-        <div class="btn close"></div>
-        <p class="title">IT Support</p>
-        <div class="desc">Resources IT will provide better service to the Agency in accordance with
-            the Publicis Group IT operational policies and ensuring a high level of IT systems
-            that can optimize their competitiveness. </div>
-    </div>
 </div>
 
 
