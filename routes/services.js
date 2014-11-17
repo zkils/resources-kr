@@ -3,11 +3,16 @@
  */
 var express = require('express');
 var router = express.Router();
+//var url = require("url");
 
-/* GET users listing. */
 router.get('/', function(req, res) {
-    //res.send('respond with a resource');
-    res.render('services.ejs', { title: 'Re:Sources Korea' });
+    //var id = req.param.pageid;
+    //var pathName = url.parse(req.url).pathname;
+    //var id = pathName.split("=");
+
+    console.log("originalUrl " + req.originalUrl);
+
+    res.render('services.ejs', { title: 'Re:Sources Korea - Services' });
 });
 
 module.exports = router;

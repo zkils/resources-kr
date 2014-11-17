@@ -17,10 +17,12 @@ function initCommonFunc() {
 
 function showNavMenu(){
     var $this = $(this);
-    var targetName , $target;
+    var targetName , $target , targetLeft;
 
     targetName = $this.attr("class").replace("nav-item",'').trim();
     $target = $("."+targetName+".nav-menu");
+    targetLeft = $this.position().left - ($target.width()/2)+ ($this.width()/3);
+    $target.css("left",targetLeft+"px");
     $target.stop();
     $target.siblings(".nav-menu").stop().fadeOut();
 
@@ -36,4 +38,4 @@ function hideNavMenu(){
     $(".menu-mask").hide();
 }
 
-function animateToTop(){ $("body").animate({scrollTop:0},'1000','swing')}
+function animateToTop(){ $("body").animate({scrollTop:0},'1000','swing'); }
