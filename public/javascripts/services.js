@@ -9,13 +9,13 @@ $(document).ready(function(){
 });
 
 function initServicesElement(){
-    $("#scrollDown").on("click",scrollDownToAddress);
+    $("#scrollDown").on("click",scrollDownToContent);
     $(".icon-set .btn").on("click",scrollToPage);
 }
 
 
-function scrollDownToAddress(){
-    $("body").animate({scrollTop:400},'5000','swing');
+function scrollDownToContent(){
+    $("body").animate({scrollTop:500},'5000','swing');
 }
 
 function scrollToPage(){

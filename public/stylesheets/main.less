@@ -22,6 +22,7 @@
 @slide-two:"/images/main_photo_02.jpg";
 @slide-three:"/images/main_photo_03.jpg";
 @publicis-logo:"/images/main_publicis_logo.png";
+@resources-kr-logo:"/images/resources-mp-logo.png";
 
 
 
@@ -52,8 +53,15 @@
           height:350px;
           top:50px;
           float: left;
-          background: url(@publicis-logo) no-repeat;
-          background-size:contain;
+
+          &.publicis{
+            background: url(@publicis-logo) no-repeat;
+            background-size:contain;
+          }
+          &.resources-kr{
+            background: url(@resources-kr-logo) no-repeat;
+            background-size:contain;
+          }
         }
 
         section{
@@ -252,8 +260,8 @@
     }
     .desc {
       position: relative;
-      font-size: 30px;
-      top: 120px;
+      font-size: 27px;
+      top: 90px;
       left: 50px;
       color: white;
       width: 750px
@@ -261,44 +269,23 @@
 
     &.finance-pane {
       background-color: @finance-color;
-      p.title.two{
-        position: absolute;
-        left:450px;
-      }
+
       .desc{
-        top: 60px;
-        font-size: 25px;
-        width: 390px;
-        &:last-child{
-          position: absolute;
-          left:450px;
-          top:119px;
-          width:410px;
-        }
+        top: 90px;
       }
-      ul{
-        list-style: initial;
-        margin: 12px;
-        font-size: 23px;
-      }
+
     }
     &.accounting-pane {
       background-color: @accounting-color;
       .desc{
-        top:65px;
-        font-size:25px;
+        top:90px;
       }
-      ul{
-        list-style: initial;
-        margin: 12px;
-        font-size: 23px;
-      }
+
     }
     &.procurement-pane {
       background-color: @procurement-color;
       .desc{
-        top:65px;
-        font-size:25px;
+        top:90px;
       }
     }
     &.legal-pane {
@@ -307,25 +294,13 @@
     &.tax-pane {
       background-color: @tax-color;
       .desc{
-        top:80px;
-        font-size:25px;
-      }
-      ul{
-        list-style: initial;
-        margin: 12px;
-        font-size:25px;
+        top:90px;
       }
     }
     &.hr-pane {
       background-color: @hr-color;
       .desc{
-        top:80px;
-        font-size:25px;
-      }
-      ul{
-        list-style: initial;
-        margin: 12px;
-        font-size:25px;
+        top:90px;
       }
     }
     &.it-pane {

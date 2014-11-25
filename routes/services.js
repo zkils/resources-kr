@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
 
     console.log("originalUrl " + req.originalUrl);
 
-    res.render('services.ejs', { title: 'Re:Sources Korea - Services' });
+    res.render('services.ejs', { title: 'Re:Sources Korea' });
 });
 
 module.exports = router;

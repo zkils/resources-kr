@@ -93,6 +93,9 @@ body,ul,div,p {
     padding-top: 1em;
     float: left;
     font-size: 22px;
+    a:hover, a:active{
+      color:#ffffff;
+    }
     &:after{
       color:@nav-active-color;
       content:"KOREA";
@@ -125,6 +128,11 @@ body,ul,div,p {
         border-color: @nav-active-color transparent transparent transparent !important;
       }
     }
+  }
+  .btn.top{
+    position: absolute;
+    right: 40px;
+    top: 25px;
   }
 }
 
@@ -289,30 +297,37 @@ body,ul,div,p {
     .btn.top{
       position: relative;
       top: -10px;
-      cursor: pointer;
-      width:27px;
-      height:27px;
-      margin-left: 30px;
-      background-color: #000000;
-      border-radius: 5px;
-      .arrow-top{
-        width: 8px;
-        height: 8px;
-        border-left: 3px solid white;
-        border-top: 3px solid #ffffff;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        position: relative;
-        top: 8px;
-        left: 8px;
-      }
-      &:hover{
-        opacity: 0.7;
-      }
-      &:active{
-        opacity: 0.9;
-      }
+
+
     }
+  }
+}
+
+.btn.top{
+  position: relative;
+  top: -10px;
+  cursor: pointer;
+  width:27px;
+  height:27px;
+  margin-left: 30px;
+  background-color: #000000;
+  border-radius: 5px;
+  .arrow-top{
+    width: 8px;
+    height: 8px;
+    border-left: 3px solid white;
+    border-top: 3px solid #ffffff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+    left: 8px;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+  &:active{
+    opacity: 0.9;
   }
 }
 .anchor{

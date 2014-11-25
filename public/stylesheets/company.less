@@ -1,0 +1,162 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+@company-image:"/images/company-top-image.png";
+@finance-icon:"/images/finance-icn.png";
+@accounting-icon:"/images/accounting-icn.png";
+@procurement-icon:"/images/procurment-icn.png";
+@legal-icon:"/images/legal-icn.png";
+@tax-icon:"/images/tax-icn.png";
+@hr-icon:"/images/hr-icn.png";
+@it-icon:"/images/it-icn.png";
+@separator:"/images/separator.png";
+
+@dark-gray: #151515;
+@light-gray: #f2f1f1;
+@gray: #999999;
+@orange: #f18914;
+@footer-backcolor:#636363;
+@nav-active-color:#e42420;
+@nav-normal-color:white;
+
+@finance-color:#38bcdf;
+@accounting-color:#B1CC4A;
+@procurement-color:#FFAB27;
+@legal-color:#865C38;
+@tax-color:#D84319;
+@hr-color:#5F79BB;
+@it-color:#B42375;
+
+
+.photo-label{
+  opacity: 0.8;
+  &.one{
+    font-size:50px;
+    top:150px;
+  }
+  &.two{
+    font-size:25px;
+    top:300px;
+  }
+}
+
+
+#scrollDown{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-left: 3px solid white;
+  border-top: 3px solid #ffffff;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 400px;
+  cursor:pointer;
+  animation: 3.4s ease-in-out infinite fadedown;
+  -webkit-animation: 3.4s ease-in-out infinite fadedown;
+
+}
+
+
+.photo-slide{
+  &.company{
+    background-image: url(@company-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    div{
+      width:100%;
+      height:100%;
+//      background: gray;
+//      opacity: 0.2;
+      p{
+        color:white;
+      }
+    }
+  }
+}
+
+.company-page-main{
+
+  .wrapper{
+    width:1200px;
+    left:0;
+    right:0;
+    margin:auto;
+
+    .page{
+      width:800px;
+      margin:auto;
+      margin-top:30px;
+      margin-bottom: 70px;
+
+      .title{
+        display: block;
+        font-family: 'Crimson Text',serif;
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #ab9763;
+        clear: both;
+      }
+      .article-paper{
+        font-family: 'Nanum Gothic', serif;
+        font-size:18px;
+        margin:10px;
+        p{
+          line-height:30px;
+        }
+        li{
+          font-size:16px;
+          margin-left:15px;
+          margin-top: 3px;
+          line-height: 25px;
+        }
+      }
+      &.resources{
+        p:first-child:first-letter{
+//          font-weight: bold;          font-size:25px;
+        }
+      }
+      &.publicis{
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+        .article-paper{
+          text-align: center;
+        }
+
+      }
+      &.ceo{
+        width:900px;
+        img{
+          float: right;
+          width:300p;
+          height:400px;
+        }
+        p:first-child{
+          font-size: 25px;
+        }
+        div.signature{
+          float: right;
+          text-align: right;
+          margin-bottom: 50px;
+
+        }
+      }
+
+    }
+  }
+}
+
+#ceo_name{
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+}
+
+.bold-line{ /*구분선*/
+  background-color: #3D0007 !important;
+}

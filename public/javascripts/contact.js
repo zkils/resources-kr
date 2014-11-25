@@ -34,5 +34,5 @@ function initializeMap() {
 }
 
 function scrollDownToAddress(){
-    $("body").animate({scrollTop:400},'3000','swing')
+    $("body").animate({scrollTop:500},'3000','swing')
 }
