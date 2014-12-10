@@ -144,6 +144,7 @@ body,ul,div,p {
   display: none;
   z-index:100;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 //  border-left: 1px solid gray;
 //  border-right: 1px solid gray;
 //  border-bottom: 1px solid gray;
@@ -173,6 +174,7 @@ body,ul,div,p {
     border-bottom:1px solid rgb(70, 70, 70);
     display: block;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     text-align: center;
     line-height: 40px;
   }
@@ -181,12 +183,14 @@ body,ul,div,p {
 /*middle메인 컨텐츠영역*/
 .main{
   .photo-container{ /*탑 사진 슬라이드*/
-    height:500px;
+    height:360px;
     position:relative;
     .photo-slide{
-      height:500px;
+      height:360px;
       position: absolute;
       width:100%;
+      background-size:cover;
+      background-position-y: 400px;
       &.one{
         background-image: url(@slide-one);
       }
@@ -202,7 +206,8 @@ body,ul,div,p {
   }
 
   .bold-line{ /*구분선*/
-    height:50px;
+    height:28px;
+    z-index:5;
     background-color: @orange;
   }
 
@@ -213,7 +218,7 @@ body,ul,div,p {
   position:relative;
 
   .contact-bar{
-    height:90px;
+    height:70px;
     background-color:@gray;
     text-align: center;
     .down-arrow{
@@ -232,7 +237,7 @@ body,ul,div,p {
       text-align: center;
       font-size: 18px;
       color: white;
-      margin: 35px 15px 0 0;
+      margin: 25px 15px 0 0;
     }
     .btn.contact{
       display: inline-block;
@@ -253,7 +258,7 @@ body,ul,div,p {
     }
   }
   .info-bar{
-    height:150px;
+    height:90px;
     background-color:@footer-backcolor;
     div{
       color :rgb(214, 214, 214);
@@ -261,7 +266,7 @@ body,ul,div,p {
     }
     .company-name{
       font-size:30px;
-      margin: 50px 500px 0 170px;
+      margin: 30px 500px 0 170px;
     }
     .icon-wrapper{
       position: relative;
@@ -382,20 +387,20 @@ body,ul,div,p {
 }
 
 @keyframes fadedown{
-  from{ opacity: 1; top:400px}
-  to{ opacity: 0; top:430px}
+  from{ opacity: 1; top:270px}
+  to{ opacity: 0; top:300px}
 }
 @-webkit-keyframes fadedown{
-  from{ opacity: 1; top:400px}
-  to{ opacity: 0; top:430px}
+  from{ opacity: 1; top:270px}
+  to{ opacity: 0; top:300px}
 }
 @-ms-keyframes fadedown{
-  from{ opacity: 1; top:400px}
-  to{ opacity: 0; top:430px}
+  from{ opacity: 1; top:270px}
+  to{ opacity: 0; top:300px}
 }
 @-moz-keyframes fadedown{
-  from{ opacity: 1; top:400px}
-  to{ opacity: 0; top:430px}
+  from{ opacity: 1; top:270px}
+  to{ opacity: 0; top:300px}
 }
 
 @doodle:"/images/doodle.png";
@@ -406,7 +411,7 @@ body,ul,div,p {
   background: url(@doodle) no-repeat;
   background-size: contain;
   top: 8px;
-  left: 100px;
+  margin-left:100px;
   display: none;
   cursor: pointer;
 }

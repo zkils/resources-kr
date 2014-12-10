@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 });
 function scrollDownToContent(e){
-    $("body,html").animate({scrollTop:500},'5000','swing');
+    $("body,html").animate({scrollTop:380},'5000','swing');
 
 }
 

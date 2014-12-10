@@ -31,7 +31,7 @@ function initializeMap() {
 }
 
 function scrollDownToAddress(){
-    $("body,html").animate({scrollTop:500},'3000','swing')
+    $("body,html").animate({scrollTop:380},'3000','swing')
 }
 
 function initContactElement(){

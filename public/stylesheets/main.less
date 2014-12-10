@@ -31,6 +31,7 @@
 @pc-width:1025px;
 
 .main{
+
   .carousel-container{ /*그룹소개 */
     background-color: white;
     height:450px;
@@ -135,6 +136,7 @@
       right:0;
       margin:auto;
       top:30px;
+      padding-left: 50px;
       .panel-title{
         font-size:20px;
         margin-left: 10px;
@@ -208,7 +210,7 @@
 .popup {
   position: absolute;
   left: 0px;
-  top: 1160px;
+  top: 1000px;
   width: 100%;
 
   background: transparent;
@@ -236,13 +238,14 @@
       color: black;
 
       &:before {
-        margin-left: 5px;
-        margin-top: -4px;
+        left: 5.5px;
+        top: -4px;
         font-weight: bold;
         font-size: 27px;
         content: "x";
-        position: absolute;
         opacity: 0.4;
+        position: relative;
+        display: inline-block;
       }
       &:hover:before {
         opacity: 0.9;
