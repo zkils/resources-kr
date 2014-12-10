@@ -10,10 +10,7 @@ $(document).ready(function(){
 
 });
 
-function initContactElement(){
-    initializeMap();
-    $("#scrollDown").on("click",scrollDownToAddress);
-}
+
 
 function initializeMap() {
     var mapCanvas = document.getElementById('map-canvas');
@@ -34,5 +31,10 @@ function initializeMap() {
 }
 
 function scrollDownToAddress(){
-    $("body").animate({scrollTop:500},'3000','swing')
+    $("body,html").animate({scrollTop:500},'3000','swing')
+}
+
+function initContactElement(){
+    initializeMap();
+    $("#scrollDown").on("click",scrollDownToAddress);
 }

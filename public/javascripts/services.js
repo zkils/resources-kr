@@ -7,18 +7,12 @@ $(document).ready(function(){
     initServicesElement();
 
 });
+function scrollDownToContent(e){
+    $("body,html").animate({scrollTop:500},'5000','swing');
 
-function initServicesElement(){
-    $("#scrollDown").on("click",scrollDownToContent);
-    $(".icon-set .btn").on("click",scrollToPage);
 }
 
-
-function scrollDownToContent(){
-    $("body").animate({scrollTop:500},'5000','swing');
-}
-
-function scrollToPage(){
+function scrollToPageByBtn(e){
     var $this = $(this);
     var targetId = $(this), $target ,targetTop;
 
@@ -26,8 +20,16 @@ function scrollToPage(){
     $target = $("#"+targetId);
     targetTop = $target.position().top;
 
-    $("body").animate({scrollTop:targetTop-100},'3000','swing')
-
-
+    $("body,html").animate({scrollTop:targetTop-100},'3000','swing');
 
 }
+
+function initServicesElement(){
+
+    $("#scrollDown").on("click",scrollDownToContent);
+    $(".icon-set .btn").on("click",scrollToPageByBtn);
+}
+
+
+
+

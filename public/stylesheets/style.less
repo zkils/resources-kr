@@ -35,7 +35,7 @@ body {
 @publicis-logo:"/images/main_publicis_logo.png";
 
 /**/
-@site-width:1600px;
+@site-width:1440px;
 @pc-width:1025px;
 
 /* Desktop Device */
@@ -318,6 +318,8 @@ body,ul,div,p {
     border-left: 3px solid white;
     border-top: 3px solid #ffffff;
     -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
     transform: rotate(45deg);
     position: relative;
     top: 8px;
@@ -386,4 +388,29 @@ body,ul,div,p {
 @-webkit-keyframes fadedown{
   from{ opacity: 1; top:400px}
   to{ opacity: 0; top:430px}
+}
+@-ms-keyframes fadedown{
+  from{ opacity: 1; top:400px}
+  to{ opacity: 0; top:430px}
+}
+@-moz-keyframes fadedown{
+  from{ opacity: 1; top:400px}
+  to{ opacity: 0; top:430px}
+}
+
+@doodle:"/images/doodle.png";
+#doodle{
+  position: fixed;
+  width: 300px;
+  height: 56px;
+  background: url(@doodle) no-repeat;
+  background-size: contain;
+  top: 8px;
+  left: 100px;
+  display: none;
+  cursor: pointer;
+}
+
+a img{
+  border: 0;
 }

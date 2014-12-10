@@ -27,7 +27,7 @@
 
 
 /**/
-@site-width:1600px;
+@site-width:1440px;
 @pc-width:1025px;
 
 .main{
@@ -104,6 +104,7 @@
         margin:15px;
         -webkit-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+        -ms-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
         box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
         &.on{
           background-color:@dark-gray;
@@ -260,8 +261,8 @@
     }
     .desc {
       position: relative;
-      font-size: 27px;
-      top: 90px;
+      font-size: 30px;
+      top: 120px;
       left: 50px;
       color: white;
       width: 750px
@@ -269,23 +270,44 @@
 
     &.finance-pane {
       background-color: @finance-color;
-
-      .desc{
-        top: 90px;
+      p.title.two{
+        position: absolute;
+        left:450px;
       }
-
+      .desc{
+        top: 60px;
+        font-size: 25px;
+        width: 390px;
+        &:last-child{
+          position: absolute;
+          left:450px;
+          top:119px;
+          width:410px;
+        }
+      }
+      ul{
+        list-style: initial;
+        margin: 12px;
+        font-size: 23px;
+      }
     }
     &.accounting-pane {
       background-color: @accounting-color;
       .desc{
-        top:90px;
+        top:65px;
+        font-size:25px;
       }
-
+      ul{
+        list-style: initial;
+        margin: 12px;
+        font-size: 23px;
+      }
     }
     &.procurement-pane {
       background-color: @procurement-color;
       .desc{
-        top:90px;
+        top:65px;
+        font-size:25px;
       }
     }
     &.legal-pane {
@@ -294,13 +316,25 @@
     &.tax-pane {
       background-color: @tax-color;
       .desc{
-        top:90px;
+        top:80px;
+        font-size:25px;
+      }
+      ul{
+        list-style: initial;
+        margin: 12px;
+        font-size:25px;
       }
     }
     &.hr-pane {
       background-color: @hr-color;
       .desc{
-        top:90px;
+        top:80px;
+        font-size:25px;
+      }
+      ul{
+        list-style: initial;
+        margin: 12px;
+        font-size:25px;
       }
     }
     &.it-pane {
@@ -313,3 +347,6 @@
 .footer{
   top: 400px;
 }
+
+
+

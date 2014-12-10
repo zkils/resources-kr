@@ -5,12 +5,15 @@
 $(document).ready(function(){
     initCommonFunc();
     initMain();
+
+
 });
 
 function initMain(){
     $(".carousel-indicator .btn").on("click",carouselSlide);
     $(".panel-list").children(".grid_1").on("click",showPopup);
     $(".popup .btn.close").on("click",closePopup);
+
 }
 
 function carouselSlide(){
