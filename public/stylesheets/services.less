@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 
 @services-image:"/images/service_top_image.jpg";
 @finance-icon:"/images/finance-icn.png";
@@ -173,6 +173,7 @@
           i{
             background-image: url(@it-icon);
           }
+
         }
       }
     }
@@ -180,7 +181,7 @@
       width:800px;
       margin:auto;
       margin-top:30px;
-      margin-bottom: 70px;
+      margin-bottom: 50px;
 
       .ribbon{
         display: inline-block;
@@ -188,14 +189,14 @@
       .title{
         display: inline-block;
         font-family: 'Crimson Text', serif;
-        font-size: 70px;
+        font-size: 45px;
         margin-left:50px;
         margin-bottom: 30px;
       }
       .article-paper{
         font-family: 'Nanum Gothic', serif;
-        font-size:22px;
-        font-weight: bold;
+        font-size:20px;
+        line-height:30px;
         margin:10px;
         li{
           font-size:20px;
@@ -204,6 +205,9 @@
         }
       }
       &.it{
+        div.clipart{
+          text-align: center;
+        }
         p{
           padding-bottom: 10px;
         }
@@ -217,7 +221,7 @@
   border: none;
   background: @finance-color;
   width: 50px;
-  height: 70px;
+  height: 50px;
   position: relative;
   color: white;
   padding: 5px;
@@ -232,6 +236,7 @@
   span{
     font-size: 25px;
     font-family: 'Lobster',cursive;
+//    font-family: 'Crimson Text',serif;
     margin-left: 17px;
     line-height: 61px;
   }
