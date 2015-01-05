@@ -31,7 +31,11 @@
 @pc-width:1025px;
 
 .main{
-
+  .photo-container{
+    .photo-slide.three {
+      background-position-y: 800px;
+    }
+  }
   .carousel-container{ /*그룹소개 */
     background-color: white;
     height:450px;
@@ -312,7 +316,7 @@
     &.procurement-pane {
       background-color: @procurement-color;
       .desc{
-        top:65px;
+        top:80px;
         font-size:25px;
       }
     }
@@ -345,6 +349,15 @@
     }
     &.it-pane {
       background-color: @it-color;
+      .desc{
+        top:60px;
+        font-size:21px;
+      }
+      ul{
+        list-style: initial;
+        margin: 12px;
+        font-size:20px;
+      }
 
     }
   }

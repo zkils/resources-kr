@@ -86,5 +86,5 @@ function initCommonFunc() {
 
     setTimeout("scrollToPage()",100);
     setColorMenuButton();
-    setDoodleAnimation();
+    //setDoodleAnimation();
 }

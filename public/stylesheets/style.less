@@ -23,12 +23,6 @@ body {
 @it-color:#B42375;
 
 
-
-
-
-
-
-
 /*images*/
 @body-pattern:"/images/footer_lodyas.png";
 @slide-one:"/images/main_top_building.jpg";
@@ -47,6 +41,60 @@ body {
   }
   .nav-bar {
 //    width: @site-width !important;
+  }
+}
+
+@media all and (min-width:900px) and (max-width:1024px) {
+  .wrapper {
+    width: 1024px;
+  }
+  .main .photo-container .photo-slide{
+    background-position-y:361px !important;
+  }
+  .main .photo-container .photo-slide.services{
+    background-position-y:0px !important;
+  }
+  .main .carousel-container{
+    width:1024px !important;
+  }
+  .footer .info-bar .company-name{
+    font-size: 20px !important;
+    margin: 0 100px 0 170px !important;
+  }
+  .company-page-main .wrapper, .service-page-main .wrapper, .contact-page-main .wrapper{
+    width:800px !important;
+  }
+  .company-page-main .wrapper .page.ceo img{
+    width:400px;
+  }
+  .company-page-main .wrapper .page.ceo{
+    width:800px !important;
+  }
+  #map-canvas{
+    left:100px !important;
+  }
+  .contact-page-main{
+    height:800px !important;
+  }
+  .main .panel-container{
+    height:850px !important;
+  }
+  .main .panel-container .panel-wrapper{
+    height: 965px !important;
+    width:830px !important;
+  }
+  .main .panel-container .panel-wrapper .panel-list .grid_3 img{
+    width:360px !important;
+  }
+  .main .panel-container .panel-wrapper .panel-list .grid_3{
+    width:360px !important;
+  }
+  .panel-list.two .grid_2:first-child{
+    width:180px !important;
+    overflow: hidden;
+  }
+  .panel-list.three .grid_2:last-child{
+    visibility: hidden;
   }
 }
 
